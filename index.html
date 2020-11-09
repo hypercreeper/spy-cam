@@ -2,11 +2,6 @@
 <body>
 <!-- Learn about this code on MDN: https://developer.mozilla.org/en-US/docs/Web/API/MediaStream_Recording_API/Recording_a_media_element -->
 
-<p>Click the "Start" button to begin video recording for a few seconds. You can stop
-   the video by clicking the creatively-named "Stop" button. The "Download"
-   button will download the received data (although it's in a raw, unwrapped form
-   that isn't very useful).
-</p>
    video: <input type="checkbox" id="checkvid"><br>
    audio: <input type="checkbox" id="checkaud"><br>
 <br>
@@ -15,7 +10,7 @@
     Start
   </div>
   <h2>Preview</h2>
-  <video id="preview" width="160" height="120" autoplay muted></video>
+  <video id="preview" width="160" height="120" autoplay muted controls></video>
 </div>
 <div class="right">
   <div id="stopButton" class="button">
