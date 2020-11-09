@@ -4,7 +4,7 @@
 
    video: <input type="checkbox" id="checkvid"><br>
    audio: <input type="checkbox" id="checkaud"><br>
-   how much time to recore (in milliseconds): <input type="number" id="t"><br>
+   how much time to record (in milliseconds): <input type="number" id="t"><br>
 <br>
 <div class="left">
   <div id="startButton" class="button">
@@ -82,14 +82,16 @@ let downloadButton = document.getElementById("downloadButton");
 let logElement = document.getElementById("log");
 var aud = document.getElementById("checkaud").checked;
 var vid = document.getElementById("checkvid").checked;
+   var t = 0;
 
 function checkmdia() {
    vid = document.getElementById("checkvid").checked;
    aud = document.getElementById("checkaud").checked;
+   t = document.getElementById("t").value;
 }
    setInterval(checkmdia, 100);
    checkmdia();
-let recordingTimeMS = document.getElementById("t").value;
+let recordingTimeMS = ;
 function log(msg) {
   logElement.innerHTML += msg + "\n";
 }
