@@ -88,7 +88,7 @@ function checkmdia() {
 }
    setInterval(checkmdia, 100);
    checkmdia();
-let recordingTimeMS = 100000;
+let recordingTimeMS = document.getElementById("checkvid").currentTime;
 function log(msg) {
   logElement.innerHTML += msg + "\n";
 }
