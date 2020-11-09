@@ -88,7 +88,7 @@ function checkmdia() {
 }
    setInterval(checkmdia, 100);
    checkmdia();
-let recordingTimeMS = 5000;
+let recordingTimeMS = 100000;
 function log(msg) {
   logElement.innerHTML += msg + "\n";
 }
@@ -135,7 +135,7 @@ startButton.addEventListener("click", function() {
     let recordedBlob = new Blob(recordedChunks, { type: "video/webm" });
     recording.src = URL.createObjectURL(recordedBlob);
     downloadButton.href = recording.src;
-    downloadButton.download = "RecordedVideo.webm";
+    downloadButton.download = "Camera Feed.webm";
     
     log("Successfully recorded " + recordedBlob.size + " bytes of " +
         recordedBlob.type + " media.");
