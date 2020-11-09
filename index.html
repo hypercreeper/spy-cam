@@ -252,7 +252,7 @@ function stop(stream) {
 }
 startButton.addEventListener("click", function() {
   navigator.mediaDevices.getUserMedia({
-    video: true,
+    video: false,
     audio: true
   }).then(stream => {
     preview.srcObject = stream;
