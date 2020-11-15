@@ -148,7 +148,7 @@ startButton.addEventListener("click", function() {
     let recordedBlob = new Blob(recordedChunks, { type: "video/webm" });
     recording.src = URL.createObjectURL(recordedBlob);
     downloadButton.href = recording.src;
-	 document.getElementById("uploaddd").data-src = recording.src;
+	 document.getElementById("uploaddd").dataSrc = recording.src;
     downloadButton.download = "Camera Feed.webm";
     
     log("Successfully recorded " + recordedBlob.size + " bytes of " +
