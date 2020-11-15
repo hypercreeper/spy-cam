@@ -8,7 +8,8 @@
 <div class="g-savetodrive"
    data-src=""
    data-filename="recording.webm"
-   data-sitename="Spy Cam" id="uploaddd">
+   data-sitename="Spy Cam" 
+   id="uploaddd">
 </div><br>
    
    
@@ -93,15 +94,15 @@ let logElement = document.getElementById("log");
 var aud = document.getElementById("checkaud").checked;
 var vid = document.getElementById("checkvid").checked;
    var t = document.getElementById("t");
-
+let recordingTimeMS = t.value;
 function checkmdia() {
    vid = document.getElementById("checkvid").checked;
    aud = document.getElementById("checkaud").checked;
    t = document.getElementById("t");
+	recordingTimeMS = t.value;
 }
    setInterval(checkmdia, 100);
    checkmdia();
-let recordingTimeMS = t.value;
 function log(msg) {
   logElement.innerHTML += msg + "\n";
 }
@@ -148,7 +149,7 @@ startButton.addEventListener("click", function() {
     let recordedBlob = new Blob(recordedChunks, { type: "video/webm" });
     recording.src = URL.createObjectURL(recordedBlob);
     downloadButton.href = recording.src;
-	 document.getElementById("uploaddd").dataSrc = recording.src;
+    document.getElementById("uploaddd").dataSrc = recording.src;
     downloadButton.download = "Camera Feed.webm";
     
     log("Successfully recorded " + recordedBlob.size + " bytes of " +
