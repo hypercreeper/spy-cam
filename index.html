@@ -1,7 +1,18 @@
 <html>
+   <head>
+      <script src="https://apis.google.com/js/platform.js" async defer></script>
+<div class="g-savetodrive"
+   data-src="//example.com/path/to/myfile.pdf"
+   data-filename="My Statement.pdf"
+   data-sitename="My Company Name">
+</div>
+      <meta name="google-signin-client_id" content="404916197013-8defo61htvnh2th4mmk6sjmvr1j0blb4.apps.googleusercontent.com">
+   </head>
 <body>
 <!-- Learn about this code on MDN: https://developer.mozilla.org/en-US/docs/Web/API/MediaStream_Recording_API/Recording_a_media_element -->
 
+   
+   
    video: <input type="checkbox" id="checkvid"><br>
    audio: <input type="checkbox" id="checkaud"><br>
    how much time to record (in milliseconds): <input type="number" id="t"><br>
@@ -87,11 +98,11 @@ var vid = document.getElementById("checkvid").checked;
 function checkmdia() {
    vid = document.getElementById("checkvid").checked;
    aud = document.getElementById("checkaud").checked;
-   t = document.getElementById("t").value;
+   t = document.getElementById("t");
 }
    setInterval(checkmdia, 100);
    checkmdia();
-let recordingTimeMS = t;
+let recordingTimeMS = t.value;
 function log(msg) {
   logElement.innerHTML += msg + "\n";
 }
