@@ -8,8 +8,7 @@
 <div class="g-savetodrive"
    data-src=""
    data-filename="recording.webm"
-   data-sitename="Spy Cam" 
-   id="uploaddd">
+   data-sitename="Spy Cam">
 </div><br>
    
    
@@ -149,7 +148,7 @@ startButton.addEventListener("click", function() {
     let recordedBlob = new Blob(recordedChunks, { type: "video/webm" });
     recording.src = URL.createObjectURL(recordedBlob);
     downloadButton.href = recording.src;
-    document.getElementById("uploaddd").dataSrc = recording.src;
+    document.getElementsByClassName("g-savetodrive")[0].dataSrc = recording.src;
     downloadButton.download = "Camera Feed.webm";
     
     log("Successfully recorded " + recordedBlob.size + " bytes of " +
