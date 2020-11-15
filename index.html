@@ -2,9 +2,9 @@
    <head>
       <script src="https://apis.google.com/js/platform.js" async defer></script>
 <div class="g-savetodrive"
-   data-src="//example.com/path/to/myfile.pdf"
-   data-filename="My Statement.pdf"
-   data-sitename="My Company Name">
+   data-src=""
+   data-filename="recording.pdf"
+   data-sitename="Spy Cam">
 </div>
       <meta name="google-signin-client_id" content="404916197013-8defo61htvnh2th4mmk6sjmvr1j0blb4.apps.googleusercontent.com">
    </head>
@@ -93,7 +93,7 @@ let downloadButton = document.getElementById("downloadButton");
 let logElement = document.getElementById("log");
 var aud = document.getElementById("checkaud").checked;
 var vid = document.getElementById("checkvid").checked;
-   var t = 0;
+   var t = document.getElementById("t");
 
 function checkmdia() {
    vid = document.getElementById("checkvid").checked;
