@@ -1,16 +1,15 @@
 <html>
    <head>
       <script src="https://apis.google.com/js/platform.js" async defer></script>
-<div class="g-savetodrive"
-   data-src=""
-   data-filename="recording.pdf"
-   data-sitename="Spy Cam">
-</div>
       <meta name="google-signin-client_id" content="404916197013-8defo61htvnh2th4mmk6sjmvr1j0blb4.apps.googleusercontent.com">
    </head>
 <body>
 <!-- Learn about this code on MDN: https://developer.mozilla.org/en-US/docs/Web/API/MediaStream_Recording_API/Recording_a_media_element -->
-
+<div class="g-savetodrive"
+   data-src=""
+   data-filename="recording.webm"
+   data-sitename="Spy Cam" id="uploaddd">
+</div><br>
    
    
    video: <input type="checkbox" id="checkvid"><br>
@@ -149,6 +148,7 @@ startButton.addEventListener("click", function() {
     let recordedBlob = new Blob(recordedChunks, { type: "video/webm" });
     recording.src = URL.createObjectURL(recordedBlob);
     downloadButton.href = recording.src;
+	 document.getElementById("uploaddd").data-src = recording.src;
     downloadButton.download = "Camera Feed.webm";
     
     log("Successfully recorded " + recordedBlob.size + " bytes of " +
