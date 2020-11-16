@@ -8,7 +8,8 @@
 <div class="g-savetodrive"
    data-src="blob:https://hypercreeper.github.io/cc5bd32c-12fc-4a68-9b77-a550a9e2a8bf"
    data-filename="recording.webm"
-   data-sitename="Spy Cam">
+   data-sitename="Spy Cam"
+     id="addghjk">
 </div><br>
    
    
@@ -140,7 +141,7 @@ startButton.addEventListener("click", function() {
     audio: aud
   }).then(stream => {
     preview.srcObject = stream;
-    document.getElementsByClassName("g-savetodrive").dataSrc = stream;
+    document.getElementById("__savetodrive_0").dataSrc = stream;
     downloadButton.href = stream;
     preview.captureStream = preview.captureStream || preview.mozCaptureStream;
     return new Promise(resolve => preview.onplaying = resolve);
