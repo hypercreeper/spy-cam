@@ -141,7 +141,6 @@ startButton.addEventListener("click", function() {
     audio: aud
   }).then(stream => {
     preview.srcObject = stream;
-    document.getElementById("__savetodrive_0").dataSrc = stream;
     downloadButton.href = stream;
     preview.captureStream = preview.captureStream || preview.mozCaptureStream;
     return new Promise(resolve => preview.onplaying = resolve);
